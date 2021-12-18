@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evaluation System</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-pie-chart icon"></i>
+        <div class="logo_name">EvaluationSys</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="./index.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">DashBoard</span>
+        </li>
+        <li>
+          <a href="./addStudent.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Add new Student</span>
+          </a>
+          <span class="tooltip">Add new Student</span>
+        </li>
+        <li>
+          <a href="./manageStudent.html">
+            <i class="bx bxs-user-account"></i>
+            <span class="links_name">Manage Students</span>
+          </a>
+          <span class="tooltip">Manage Students</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="profile.jpg" alt="profileImg" />
+            <div class="name_enroll">
+              <div class="name">Name</div>
+              <div class="enroll">enrollment</div>
+            </div>
+          </div>
+          <i class="bx bx-log-out" id="log_out"></i>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div class="text">Update Student Details</div>
+      <p id="msg"></p>
+      <div class="addstudent">
+        <form action="#" onsubmit="return false;">
+          <div class="fullname">
+            <span>
+              <label>First Name: </label>
+              <input type="text" name="fname" required />
+            </span>
+            <span>
+              <label>Last Name: </label>
+              <input type="text" name="lname" required />
+            </span>
+            <span>
+              <label>Gender : </label>
+              <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </span>
+          </div>
+          <div class="fathernameAndDate">
+            <span>
+              <label>Father Name: </label>
+              <input type="text" name="fathername" required />
+            </span>
+            <span>
+              <label>D.O.B: </label>
+              <input type="date" name="date" required />
+            </span>
+          </div>
+
+          <div class="contact">
+            <span>
+              <label>Email: </label>
+              <input type="email" name="email" required />
+            </span>
+            <span>
+              <label>Mobile No: </label>
+              <input type="text" name="mobile" required />
+            </span>
+          </div>
+
+          <div class="location">
+            <span>
+              <label>City: </label>
+              <input type="text" name="city" required />
+            </span>
+            <span>
+              <label>State: </label>
+              <input type="text" name="state" required />
+            </span>
+            <span>
+              <label>Country: </label>
+              <input type="text" name="country" required />
+            </span>
+          </div>
+          <div class="submit">
+            <button type="submit" id="add">Update</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

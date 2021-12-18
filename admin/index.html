@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evaluation System</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/managestudent.css" />
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-pie-chart icon"></i>
+        <div class="logo_name">EvaluationSys</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="bx bxs-user-account"></i>
+            <span class="links_name">Manage Students</span>
+          </a>
+          <span class="tooltip">Manage Students</span>
+        </li>
+        <li>
+          <a href="./addStudent.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Add new Student</span>
+          </a>
+          <span class="tooltip">Add new Student</span>
+        </li>
+
+        <li class="profile">
+          <div class="profile-details">
+            <img src="profile.jpg" alt="profileImg" />
+            <div class="name_enroll">
+              <div class="name">admin</div>
+              <div class="enroll">admin</div>
+            </div>
+          </div>
+          <a href="../login/index.html">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div class="text">Manage Students</div>
+
+      <div class="search box">
+        <div>
+          <form id="search">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search Enrollment Number.."
+            />
+            <button type="submit" id="searchbtn">search</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="students box">
+        <div id="nodata"></div>
+        <div class="row" id="row">
+          <div>
+            <span id="enroll"></span>
+            <span id="name"></span>
+          </div>
+          <div>
+            <span id="update">
+              <a href="./addOrUpdateMarks.html">
+                <button>Add/update Marks</button>
+              </a>
+            </span>
+            <span id="update">
+              <a href="./updateStudent.html" onclick="senddata" id="send">
+                <button>Update Details</button>
+              </a>
+            </span>
+            <span id="delete"><button id="deleteRecord">Delete</button></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script type="module" src="./js/fbase.js"></script>
+  </body>
+</html>

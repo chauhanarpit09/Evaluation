@@ -1,0 +1,50 @@
+
+.addstudent{
+    display: flex;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+    padding: 70px 80px;
+    margin: 20px;
+
+}
+
+.addstudent form div{
+    padding: 10px;
+}
+.addstudent form div span{
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.addstudent form div span select{
+    padding: 10px 20px;
+}
+
+
+.addstudent form div span input{
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 20px;
+    margin: 1px 20px;
+    border-radius: 2px;
+}
+.submit{
+    margin: 50px;
+}
+.submit button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid #4285F4;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+    color: #4285F4;
+    background-color: #fff;;
+    font-size: 20px;
+}
+.submit button:hover{
+    background-color: #4285F4;
+    color: #fff;
+
+}

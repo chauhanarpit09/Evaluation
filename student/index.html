@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evaluation System</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/result.css" />
+    <!-- Boxicons CDN Link -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body onload="check();">
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class="bx bx-pie-chart icon"></i>
+        <div class="logo_name">EvaluationSys</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Evaluation of student</span>
+          </a>
+          <span class="tooltip">Evaluation of student</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <img src="profile.jpg" alt="profileImg" />
+            <div class="name_enroll">
+              <div class="name"></div>
+              <div class="enroll"></div>
+            </div>
+          </div>
+          <a href="../login/index.html">
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+      <div class="text">Evaluation of academic performance</div>
+      <div class="buttons">
+        <button id="detail">Student Detail</button>
+        <button id="mid">Midterm Result</button>
+        <button id="end">Endterm Result</button>
+        <button id="Visualization">Visualization</button>
+      </div>
+
+      <div class="msg-container">
+        <div class="msg"><p id="msg"></p></div>
+      </div>
+
+      <!--user details-->
+      <div class="details" id="user-details">
+        <div class="heading">Student Details</div>
+        <div class="enroll">
+          <label>Enrollement Number</label>
+          <span id="enroll"></span>
+        </div>
+        <div>
+          <label>Name:</label>
+          <span id="name"></span>
+          <label>Father Name:</label>
+          <span id="name"></span>
+        </div>
+        <div>
+          <label>Gender:</label>
+          <span id="name"></span>
+          <label>mobile:</label>
+          <span id="name"></span>
+        </div>
+        <div>
+          <label>Email:</label>
+          <span id="name"></span>
+        </div>
+      </div>
+
+      <!--midterm-->
+      <div class="midterm" id="mid">
+        <div class="heading">Midterm Exam Result</div>
+        <div class="msg-container">
+          <div class="msg"><p id="msg"></p></div>
+        </div>
+        <div style="overflow-x: auto" class="table">
+          <table>
+            <tr>
+              <th>Subject</th>
+              <th>Subject Code</th>
+              <th>Obtained Marks</th>
+              <th>Maximum Marks</th>
+            </tr>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td>IBM 501</td>
+              <td>21</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>Scala Programming for Data Science</td>
+              <td>IBM 512</td>
+              <td>22</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>Operating Systems</td>
+              <td>TCS 502</td>
+              <td>23</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>Hadoop Fundamentals</td>
+              <td>TCS 561</td>
+              <td>24</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>Career Skills</td>
+              <td>TCS 501</td>
+              <td>21</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>120</td>
+              <td>230</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <p>Total percentage : <span id="midtermmarks"></span></p>
+          <p>Grade : <span id="midtermgrade"></span></p>
+        </div>
+      </div>
+
+      <!--endterm-->
+      <div class="endterm">
+        <div class="heading">Endterm Exam Result</div>
+        <div class="msg-container">
+          <div class="msg"><p id="msg"></p></div>
+        </div>
+        <div style="overflow-x: auto" class="table">
+          <table>
+            <tr>
+              <th>Subject</th>
+              <th>Subject Code</th>
+              <th>Obtained Marks</th>
+              <th>Maximum Marks</th>
+            </tr>
+            <tr>
+              <td>Artificial Intelligence</td>
+              <td>IBM 501</td>
+              <td><input type="text" name="obibm501" /></td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Scala Programming for Data Science</td>
+              <td>IBM 512</td>
+              <td><input type="text" name="obibm512" /></td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Operating Systems</td>
+              <td>TCS 502</td>
+              <td><input type="text" name="obtcs502" /></td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Hadoop Fundamentals</td>
+              <td>TCS 561</td>
+              <td><input type="text" name="obtcs561" /></td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Career Skills</td>
+              <td>TCS 501</td>
+              <td><input type="text" name="obtcs501" /></td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>120</td>
+              <td>230</td>
+            </tr>
+          </table>
+        </div>
+        <div>
+          <p>Total percentage : <span id="endtermmarks"></span></p>
+          <p>Grade : <span id="endtermgrade"></span></p>
+        </div>
+      </div>
+
+      <!--visual-->
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
